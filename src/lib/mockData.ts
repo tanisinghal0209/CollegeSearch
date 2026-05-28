@@ -386,6 +386,79 @@ const EXTRA_DEFS: [string,string,string,string,string,number,number,number,numbe
   ["KMC Manipal", "kmc-manipal", "Manipal", "Karnataka", "Private", 1953, 10, 4.6, 850000, 1800000, 97, ["KMC Hospital", "Apollo", "Fortis"], "NEET"]
 ];
 
+const DOMAIN_MAPS: Record<string, string> = {
+  "iit-madras": "iitm.ac.in",
+  "iit-kanpur": "iitk.ac.in",
+  "iit-kharagpur": "iitkgp.ac.in",
+  "iit-roorkee": "iitr.ac.in",
+  "iit-guwahati": "iitg.ac.in",
+  "iit-hyderabad": "iith.ac.in",
+  "iit-bhu": "iitbhu.ac.in",
+  "nit-warangal": "nitw.ac.in",
+  "nit-surathkal": "nitk.ac.in",
+  "nit-rourkela": "nitrkl.ac.in",
+  "nit-calicut": "nitc.ac.in",
+  "vit-vellore": "vit.ac.in",
+  "manipal-it": "manipal.edu",
+  "iiit-hyderabad": "iiit.ac.in",
+  "dtu-delhi": "dtu.ac.in",
+  "nsut-delhi": "nsut.ac.in",
+  "iim-bangalore": "iimb.ac.in",
+  "iim-calcutta": "iimcal.ac.in",
+  "iim-lucknow": "iiml.ac.in",
+  "iim-kozhikode": "iimk.ac.in",
+  "iim-indore": "iimidr.ac.in",
+  "cmc-vellore": "cmch-vellore.edu",
+  "manipal-medical": "manipal.edu",
+  "jipmer": "jipmer.edu.in",
+  "bits-goa": "bits-pilani.ac.in",
+  "bits-hyderabad": "bits-pilani.ac.in",
+  "srm-chennai": "srmist.edu.in",
+  "amity-noida": "amity.edu",
+  "jadavpur-university": "jaduniv.edu.in",
+  "anna-university": "annauniv.edu",
+  "coep-pune": "coep.org.in",
+  "vjti-mumbai": "vjti.ac.in",
+  "pec-chandigarh": "pec.ac.in",
+  "thapar-patiala": "thapar.edu",
+  "psg-tech": "psgtech.edu",
+  "rvce-bangalore": "rvce.edu.in",
+  "msrit-bangalore": "msrit.edu",
+  "bms-bangalore": "bmsce.ac.in",
+  "nit-jaipur": "mnit.ac.in",
+  "nit-bhopal": "manit.ac.in",
+  "iiit-delhi": "iiitd.ac.in",
+  "iit-indore": "iiti.ac.in",
+  "iit-gandhinagar": "iitgn.ac.in",
+  "nit-allahabad": "mnnit.ac.in",
+  "afmc-pune": "afmc.nic.in",
+  "kgmu-lucknow": "kgmu.org",
+  "mamc-delhi": "mamc.ac.in",
+  "grant-medical-mumbai": "gmcjjh.org",
+  "sjmc-bangalore": "stjohns.in",
+  "kmc-mangalore": "manipal.edu",
+  "ims-bhu": "bhu.ac.in",
+  "mmc-chennai": "mmc.ac.in",
+  "iim-rohtak": "iimrohtak.ac.in",
+  "iim-ranchi": "iimranchi.ac.in",
+  "iim-raipur": "iimraipur.ac.in",
+  "iim-trichy": "iimtrichy.ac.in",
+  "iim-udaipur": "iimu.ac.in",
+  "fms-delhi": "fms.edu",
+  "spjimr-mumbai": "spjimr.org",
+  "mdi-gurgaon": "mdi.ac.in",
+  "jbims-mumbai": "jbims.edu",
+  "iift-delhi": "iift.ac.in",
+  "st-stephens": "ststephens.edu",
+  "srcc-delhi": "srcc.edu",
+  "hindu-college": "hinducollege.ac.in",
+  "hansraj-college": "hansrajcollege.ac.in",
+  "miranda-house": "mirandahouse.ac.in",
+  "vmmc-delhi": "vmmc-sjh.nic.in",
+  "lhmc-delhi": "lhmc-hosp.gov.in",
+  "kmc-manipal": "manipal.edu"
+};
+
 export function generateExtraColleges(): College[] {
   const BANNERS = [
     "1541339907198-e08756dedf3f",
@@ -395,7 +468,7 @@ export function generateExtraColleges(): College[] {
     "1517245386807-bb43f82c33c4"
   ];
   return EXTRA_DEFS.map(([name,slug,city,state,type,est,rank,rating,avgSal,highSal,placRate,recruiters,exam], idx) => {
-    const domain = `${slug.replace(/-/g,'')}.ac.in`;
+    const domain = DOMAIN_MAPS[slug] || `${slug.replace(/-/g,'')}.ac.in`;
     const bnrId = BANNERS[slug.length % BANNERS.length];
     return {
     id: `col_${slug.replace(/-/g,'')}`,
