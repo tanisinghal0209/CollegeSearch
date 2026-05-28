@@ -85,11 +85,21 @@ export const INITIAL_COLLEGES: College[] = [
     courses: [
       { name: "B.Tech Computer Science and Engineering", duration: 4, fees: 800000, seats: 150 },
       { name: "B.Tech Electrical Engineering", duration: 4, fees: 800000, seats: 120 },
-      { name: "B.Tech Mechanical Engineering", duration: 4, fees: 800000, seats: 140 }
+      { name: "B.Tech Mechanical Engineering", duration: 4, fees: 800000, seats: 140 },
+      { name: "B.Tech Aerospace Engineering", duration: 4, fees: 800000, seats: 60 },
+      { name: "B.Tech Chemical Engineering", duration: 4, fees: 800000, seats: 80 },
+      { name: "B.Tech Metallurgical Engineering", duration: 4, fees: 800000, seats: 60 },
+      { name: "B.Tech Engineering Physics", duration: 4, fees: 800000, seats: 45 }
     ],
     predictorData: [
       { exam: "JEE_ADVANCED", category: "GENERAL", branch: "Computer Science", openingRank: 1, closingRank: 60, year: 2023 },
-      { exam: "JEE_ADVANCED", category: "OBC", branch: "Computer Science", openingRank: 1, closingRank: 35, year: 2023 }
+      { exam: "JEE_ADVANCED", category: "OBC", branch: "Computer Science", openingRank: 1, closingRank: 35, year: 2023 },
+      { exam: "JEE_ADVANCED", category: "GENERAL", branch: "Electrical", openingRank: 60, closingRank: 300, year: 2023 },
+      { exam: "JEE_ADVANCED", category: "GENERAL", branch: "Mechanical", openingRank: 200, closingRank: 600, year: 2023 },
+      { exam: "JEE_ADVANCED", category: "GENERAL", branch: "Aerospace", openingRank: 150, closingRank: 500, year: 2023 },
+      { exam: "JEE_ADVANCED", category: "GENERAL", branch: "Chemical", openingRank: 400, closingRank: 900, year: 2023 },
+      { exam: "JEE_ADVANCED", category: "GENERAL", branch: "Metallurgical Engineering", openingRank: 600, closingRank: 1300, year: 2023 },
+      { exam: "JEE_ADVANCED", category: "GENERAL", branch: "Engineering Physics", openingRank: 100, closingRank: 450, year: 2023 }
     ]
   },
   {
@@ -118,10 +128,19 @@ export const INITIAL_COLLEGES: College[] = [
     facilities: ["Library", "Hostel", "Gym", "Cafeteria", "Medical"],
     courses: [
       { name: "B.Tech Computer Science and Engineering", duration: 4, fees: 850000, seats: 100 },
-      { name: "B.Tech Mathematics and Computing", duration: 4, fees: 850000, seats: 60 }
+      { name: "B.Tech Mathematics and Computing", duration: 4, fees: 850000, seats: 60 },
+      { name: "B.Tech Electrical Engineering", duration: 4, fees: 850000, seats: 100 },
+      { name: "B.Tech Mechanical Engineering", duration: 4, fees: 850000, seats: 90 },
+      { name: "B.Tech Civil Engineering", duration: 4, fees: 850000, seats: 70 },
+      { name: "B.Tech Chemical Engineering", duration: 4, fees: 850000, seats: 70 }
     ],
     predictorData: [
-      { exam: "JEE_ADVANCED", category: "GENERAL", branch: "Computer Science", openingRank: 2, closingRank: 100, year: 2023 }
+      { exam: "JEE_ADVANCED", category: "GENERAL", branch: "Computer Science", openingRank: 2, closingRank: 100, year: 2023 },
+      { exam: "JEE_ADVANCED", category: "GENERAL", branch: "Mathematics and Computing", openingRank: 50, closingRank: 250, year: 2023 },
+      { exam: "JEE_ADVANCED", category: "GENERAL", branch: "Electrical", openingRank: 100, closingRank: 400, year: 2023 },
+      { exam: "JEE_ADVANCED", category: "GENERAL", branch: "Mechanical", openingRank: 300, closingRank: 800, year: 2023 },
+      { exam: "JEE_ADVANCED", category: "GENERAL", branch: "Civil", openingRank: 500, closingRank: 1200, year: 2023 },
+      { exam: "JEE_ADVANCED", category: "GENERAL", branch: "Chemical", openingRank: 450, closingRank: 1100, year: 2023 }
     ]
   },
   {
@@ -150,10 +169,16 @@ export const INITIAL_COLLEGES: College[] = [
     facilities: ["Library", "Hostel", "Sports", "Labs", "Auditorium"],
     courses: [
       { name: "B.E. Computer Science", duration: 4, fees: 2200000, seats: 250 },
-      { name: "B.E. Electronics and Instrumentation", duration: 4, fees: 2200000, seats: 150 }
+      { name: "B.E. Electronics and Instrumentation", duration: 4, fees: 2200000, seats: 150 },
+      { name: "B.E. Electronics & Communication", duration: 4, fees: 2200000, seats: 120 },
+      { name: "B.E. Mechanical Engineering", duration: 4, fees: 2200000, seats: 100 },
+      { name: "B.E. Chemical Engineering", duration: 4, fees: 2200000, seats: 80 }
     ],
     predictorData: [
-      { exam: "BITSAT", category: "GENERAL", branch: "Computer Science", openingRank: 330, closingRank: 390, year: 2023 }
+      { exam: "BITSAT", category: "GENERAL", branch: "Computer Science", openingRank: 330, closingRank: 390, year: 2023 },
+      { exam: "BITSAT", category: "GENERAL", branch: "ECE", openingRank: 300, closingRank: 330, year: 2023 },
+      { exam: "BITSAT", category: "GENERAL", branch: "Mechanical", openingRank: 240, closingRank: 270, year: 2023 },
+      { exam: "BITSAT", category: "GENERAL", branch: "Chemical", openingRank: 210, closingRank: 240, year: 2023 }
     ]
   },
   {
@@ -181,10 +206,18 @@ export const INITIAL_COLLEGES: College[] = [
     },
     facilities: ["Library", "Hostel", "Sports", "Labs", "Hospital"],
     courses: [
-      { name: "B.Tech Computer Science and Engineering", duration: 4, fees: 600000, seats: 120 }
+      { name: "B.Tech Computer Science and Engineering", duration: 4, fees: 600000, seats: 120 },
+      { name: "B.Tech Electronics & Communication", duration: 4, fees: 600000, seats: 90 },
+      { name: "B.Tech Electrical Engineering", duration: 4, fees: 600000, seats: 90 },
+      { name: "B.Tech Mechanical Engineering", duration: 4, fees: 600000, seats: 100 },
+      { name: "B.Tech Civil Engineering", duration: 4, fees: 600000, seats: 60 }
     ],
     predictorData: [
-      { exam: "JEE_MAIN", category: "GENERAL", branch: "Computer Science", openingRank: 100, closingRank: 1500, year: 2023 }
+      { exam: "JEE_MAIN", category: "GENERAL", branch: "Computer Science", openingRank: 100, closingRank: 1500, year: 2023 },
+      { exam: "JEE_MAIN", category: "GENERAL", branch: "ECE", openingRank: 800, closingRank: 3000, year: 2023 },
+      { exam: "JEE_MAIN", category: "GENERAL", branch: "Electrical", openingRank: 1500, closingRank: 5000, year: 2023 },
+      { exam: "JEE_MAIN", category: "GENERAL", branch: "Mechanical", openingRank: 3000, closingRank: 8000, year: 2023 },
+      { exam: "JEE_MAIN", category: "GENERAL", branch: "Civil", openingRank: 5000, closingRank: 12000, year: 2023 }
     ]
   },
   {
@@ -212,10 +245,14 @@ export const INITIAL_COLLEGES: College[] = [
     },
     facilities: ["Library", "Hostel", "Hospital", "Labs", "Auditorium"],
     courses: [
-      { name: "MBBS", duration: 5, fees: 6000, seats: 132 }
+      { name: "MBBS", duration: 5, fees: 6000, seats: 132 },
+      { name: "BDS", duration: 5, fees: 5000, seats: 50 },
+      { name: "B.Sc. Nursing", duration: 4, fees: 4000, seats: 40 }
     ],
     predictorData: [
-      { exam: "NEET", category: "GENERAL", branch: "MBBS", openingRank: 1, closingRank: 50, year: 2023 }
+      { exam: "NEET", category: "GENERAL", branch: "MBBS", openingRank: 1, closingRank: 50, year: 2023 },
+      { exam: "NEET", category: "GENERAL", branch: "BDS", openingRank: 1, closingRank: 100, year: 2023 },
+      { exam: "NEET", category: "GENERAL", branch: "Nursing", openingRank: 50, closingRank: 300, year: 2023 }
     ]
   },
   {
@@ -338,6 +375,15 @@ const EXTRA_DEFS: [string,string,string,string,string,number,number,number,numbe
   ["MDI Gurgaon","mdi-gurgaon","Gurgaon","Haryana","Private",1973,10,4.5,2300000,4500000,99,["Deloitte","PwC","Goldman Sachs"],"CAT"],
   ["JBIMS Mumbai","jbims-mumbai","Mumbai","Maharashtra","Government",1965,9,4.7,2700000,4200000,100,["McKinsey","Reliance","HDFC"],"CAT"],
   ["IIFT New Delhi","iift-delhi","New Delhi","Delhi","Government",1963,11,4.5,2100000,4600000,98,["ITC","Godrej","Amazon"],"CAT"],
+  
+  ["St. Stephen's College", "st-stephens", "New Delhi", "Delhi", "Government", 1881, 14, 4.7, 800000, 2500000, 92, ["Bain", "McKinsey", "EY", "KPMG"], "CUET"],
+  ["SRCC Delhi", "srcc-delhi", "New Delhi", "Delhi", "Government", 1926, 19, 4.8, 1000000, 3000000, 95, ["Deutsche Bank", "HUL", "BCG", "EY"], "CUET"],
+  ["Hindu College", "hindu-college", "New Delhi", "Delhi", "Government", 1899, 2, 4.6, 750000, 2200000, 90, ["KPMG", "Deloitte", "PwC", "HDFC"], "CUET"],
+  ["Hansraj College", "hansraj-college", "New Delhi", "Delhi", "Government", 1948, 12, 4.5, 700000, 2000000, 88, ["TCS", "Infosys", "EY", "Wipro"], "CUET"],
+  ["Miranda House", "miranda-house", "New Delhi", "Delhi", "Government", 1948, 1, 4.7, 720000, 2100000, 89, ["Deloitte", "PwC", "KPMG"], "CUET"],
+  ["VMMC New Delhi", "vmmc-delhi", "New Delhi", "Delhi", "Government", 2001, 11, 4.7, 1000000, 2200000, 99, ["Safdarjung Hospital", "Apollo", "Fortis"], "NEET"],
+  ["LHMC New Delhi", "lhmc-delhi", "New Delhi", "Delhi", "Government", 1916, 9, 4.6, 950000, 1800000, 98, ["LHMC Hospital", "Max", "Fortis"], "NEET"],
+  ["KMC Manipal", "kmc-manipal", "Manipal", "Karnataka", "Private", 1953, 10, 4.6, 850000, 1800000, 97, ["KMC Hospital", "Apollo", "Fortis"], "NEET"]
 ];
 
 export function generateExtraColleges(): College[] {
@@ -360,29 +406,121 @@ export function generateExtraColleges(): College[] {
     bannerUrl: `https://images.unsplash.com/photo-${bnrId}?w=1200&h=500&fit=crop&q=80`,
     website: `https://www.${domain}`,
     description: `${name} is a premier ${type.toLowerCase()} institution in ${city}, ${state}, renowned for academic excellence and strong industry connections.`,
-    fees: { min: type==="Government"?100000:800000, max: type==="Government"?800000:2500000, currency: "INR" },
+    fees: { min: type==="Government"?10000:800000, max: type==="Government"?80000:2500000, currency: "INR" },
     placements: { averageSalary: avgSal as number, highestSalary: highSal as number, topRecruiters: recruiters as string[], placementRate: placRate as number },
     facilities: ["Library","Hostel","Sports Complex","Labs","Wi-Fi Campus","Cafeteria"],
     courses: exam === "NEET" ? [
       { name: "MBBS", duration: 5, fees: type==="Government"?50000:1500000, seats: 150 },
       { name: "BDS", duration: 5, fees: type==="Government"?40000:1000000, seats: 50 },
+      { name: "BAMS", duration: 5, fees: type==="Government"?30000:800000, seats: 60 },
+      { name: "BHMS", duration: 5, fees: type==="Government"?25000:600000, seats: 60 },
+      { name: "B.Sc. Nursing", duration: 4, fees: type==="Government"?20000:400000, seats: 40 },
+      { name: "B.Pharm", duration: 4, fees: type==="Government"?30000:500000, seats: 60 },
+      { name: "BPT", duration: 4, fees: type==="Government"?25000:450000, seats: 40 },
+      { name: "BVSc", duration: 5, fees: type==="Government"?40000:600000, seats: 40 }
     ] : exam === "CAT" ? [
       { name: "MBA / PGDM", duration: 2, fees: type==="Government"?1500000:2500000, seats: 240 },
       { name: "Executive MBA", duration: 1, fees: type==="Government"?1200000:2000000, seats: 60 },
+      { name: "MBA Finance", duration: 2, fees: type==="Government"?1500000:2500000, seats: 80 },
+      { name: "MBA Marketing", duration: 2, fees: type==="Government"?1500000:2500000, seats: 80 },
+      { name: "MBA Operations", duration: 2, fees: type==="Government"?1500000:2500000, seats: 60 },
+      { name: "MBA Human Resources", duration: 2, fees: type==="Government"?1500000:2500000, seats: 60 },
+      { name: "MBA Business Analytics", duration: 2, fees: type==="Government"?1500000:2500000, seats: 60 },
+      { name: "MBA Information Technology", duration: 2, fees: type==="Government"?1500000:2500000, seats: 60 },
+      { name: "MBA International Business", duration: 2, fees: type==="Government"?1500000:2500000, seats: 60 }
+    ] : exam === "CUET" ? [
+      { name: "B.A. (Hons) Economics", duration: 3, fees: type==="Government"?12000:50000, seats: 80 },
+      { name: "B.Com (Hons)", duration: 3, fees: type==="Government"?15000:60000, seats: 150 },
+      { name: "B.Sc. (Hons) Physics", duration: 3, fees: type==="Government"?18000:70000, seats: 60 },
+      { name: "B.A. (Hons) English", duration: 3, fees: type==="Government"?10000:45000, seats: 80 },
+      { name: "B.A. (Hons) Political Science", duration: 3, fees: type==="Government"?10000:50000, seats: 80 },
+      { name: "B.A. (Hons) History", duration: 3, fees: type==="Government"?10000:48000, seats: 80 },
+      { name: "B.A. (Hons) Psychology", duration: 3, fees: type==="Government"?12000:55000, seats: 50 },
+      { name: "B.Sc. (Hons) Chemistry", duration: 3, fees: type==="Government"?18000:72000, seats: 60 },
+      { name: "B.Sc. (Hons) Computer Science", duration: 3, fees: type==="Government"?25000:90000, seats: 60 },
+      { name: "B.Sc. (Hons) Mathematics", duration: 3, fees: type==="Government"?15000:65000, seats: 80 }
+    ] : exam === "BITSAT" ? [
+      { name: "B.E. Computer Science", duration: 4, fees: type==="Government"?600000:2200000, seats: 120 },
+      { name: "B.E. Electronics & Communication", duration: 4, fees: type==="Government"?550000:2000000, seats: 90 },
+      { name: "B.E. Electrical & Electronics", duration: 4, fees: type==="Government"?550000:2000000, seats: 90 },
+      { name: "B.E. Mechanical Engineering", duration: 4, fees: type==="Government"?500000:1800000, seats: 100 },
+      { name: "B.E. Chemical Engineering", duration: 4, fees: type==="Government"?500000:1800000, seats: 60 },
+      { name: "B.E. Civil Engineering", duration: 4, fees: type==="Government"?450000:1600000, seats: 60 },
+      { name: "B.E. Biotechnology", duration: 4, fees: type==="Government"?500000:1800000, seats: 40 },
+      { name: "B.E. AI & Data Science", duration: 4, fees: type==="Government"?600000:2200000, seats: 50 },
+      { name: "B.E. Information Technology", duration: 4, fees: type==="Government"?550000:2000000, seats: 60 }
     ] : [
       { name: "B.Tech Computer Science", duration: 4, fees: type==="Government"?600000:2000000, seats: 120 },
       { name: "B.Tech Electronics & Communication", duration: 4, fees: type==="Government"?550000:1800000, seats: 90 },
-      { name: "B.Tech Mechanical Engineering", duration: 4, fees: type==="Government"?500000:1600000, seats: 100 }
+      { name: "B.Tech Electrical Engineering", duration: 4, fees: type==="Government"?550000:1800000, seats: 90 },
+      { name: "B.Tech Mechanical Engineering", duration: 4, fees: type==="Government"?500000:1600000, seats: 100 },
+      { name: "B.Tech Civil Engineering", duration: 4, fees: type==="Government"?450000:1400000, seats: 60 },
+      { name: "B.Tech Chemical Engineering", duration: 4, fees: type==="Government"?500000:1500000, seats: 60 },
+      { name: "B.Tech Aerospace Engineering", duration: 4, fees: type==="Government"?650000:2200000, seats: 40 },
+      { name: "B.Tech Biotechnology", duration: 4, fees: type==="Government"?500000:1600000, seats: 40 },
+      { name: "B.Tech AI & Data Science", duration: 4, fees: type==="Government"?600000:2100000, seats: 60 },
+      { name: "B.Tech Information Technology", duration: 4, fees: type==="Government"?550000:1900000, seats: 60 },
+      { name: "B.Tech Engineering Physics", duration: 4, fees: type==="Government"?550000:1800000, seats: 30 },
+      { name: "B.Tech Metallurgical Engineering", duration: 4, fees: type==="Government"?450000:1500000, seats: 60 },
+      { name: "B.Tech Production Engineering", duration: 4, fees: type==="Government"?450000:1500000, seats: 50 },
+      { name: "B.Tech Mining Engineering", duration: 4, fees: type==="Government"?450000:1400000, seats: 40 }
     ],
     predictorData: exam === "NEET" ? [
       { exam: exam as string, category: "GENERAL", branch: "MBBS", openingRank: rank*10, closingRank: rank*50, year: 2023 },
       { exam: exam as string, category: "GENERAL", branch: "BDS", openingRank: rank*60, closingRank: rank*150, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "BAMS", openingRank: rank*150, closingRank: rank*350, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "BHMS", openingRank: rank*300, closingRank: rank*600, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Nursing", openingRank: rank*500, closingRank: rank*1000, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "B.Pharm", openingRank: rank*400, closingRank: rank*850, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "BPT", openingRank: rank*450, closingRank: rank*950, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "BVSc", openingRank: rank*350, closingRank: rank*750, year: 2023 }
     ] : exam === "CAT" ? [
-      { exam: exam as string, category: "GENERAL", branch: "MBA", openingRank: 99, closingRank: 100, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "MBA", openingRank: 99, closingRank: 99, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "PGDM", openingRank: 98, closingRank: 98, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Executive MBA", openingRank: 95, closingRank: 95, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Finance", openingRank: 98, closingRank: 98, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Marketing", openingRank: 97, closingRank: 97, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Operations", openingRank: 96, closingRank: 96, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "HR", openingRank: 95, closingRank: 95, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Business Analytics", openingRank: 97, closingRank: 97, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Information Technology", openingRank: 96, closingRank: 96, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "International Business", openingRank: 96, closingRank: 96, year: 2023 }
+    ] : exam === "CUET" ? [
+      { exam: exam as string, category: "GENERAL", branch: "B.A. (Hons) Economics", openingRank: 780, closingRank: 795, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "B.Com (Hons)", openingRank: 775, closingRank: 790, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "B.Sc. (Hons) Physics", openingRank: 750, closingRank: 780, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "B.A. (Hons) English", openingRank: 760, closingRank: 785, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "B.A. (Hons) Political Science", openingRank: 770, closingRank: 790, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "B.A. (Hons) History", openingRank: 750, closingRank: 775, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "B.A. (Hons) Psychology", openingRank: 765, closingRank: 785, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "B.Sc. (Hons) Chemistry", openingRank: 730, closingRank: 760, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "B.Sc. (Hons) Computer Science", openingRank: 760, closingRank: 780, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "B.Sc. (Hons) Mathematics", openingRank: 740, closingRank: 770, year: 2023 }
+    ] : exam === "BITSAT" ? [
+      { exam: exam as string, category: "GENERAL", branch: "Computer Science", openingRank: Math.max(150, 360 - rank*3), closingRank: Math.max(150, 380 - rank*2), year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "ECE", openingRank: Math.max(150, 320 - rank*3), closingRank: Math.max(150, 340 - rank*2), year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Electrical", openingRank: Math.max(150, 300 - rank*3), closingRank: Math.max(150, 320 - rank*2), year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Mechanical", openingRank: Math.max(150, 270 - rank*3), closingRank: Math.max(150, 290 - rank*2), year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Chemical", openingRank: Math.max(150, 240 - rank*3), closingRank: Math.max(150, 260 - rank*2), year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Civil", openingRank: Math.max(150, 220 - rank*3), closingRank: Math.max(150, 240 - rank*2), year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Biotechnology", openingRank: Math.max(150, 200 - rank*3), closingRank: Math.max(150, 220 - rank*2), year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "AI & Data Science", openingRank: Math.max(150, 310 - rank*3), closingRank: Math.max(150, 330 - rank*2), year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Information Technology", openingRank: Math.max(150, 300 - rank*3), closingRank: Math.max(150, 320 - rank*2), year: 2023 }
     ] : [
       { exam: exam as string, category: "GENERAL", branch: "Computer Science", openingRank: rank*100, closingRank: rank*300, year: 2023 },
       { exam: exam as string, category: "GENERAL", branch: "ECE", openingRank: rank*250, closingRank: rank*550, year: 2023 },
-      { exam: exam as string, category: "GENERAL", branch: "Mechanical", openingRank: rank*400, closingRank: rank*900, year: 2023 }
+      { exam: exam as string, category: "GENERAL", branch: "Electrical", openingRank: rank*300, closingRank: rank*650, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Mechanical", openingRank: rank*400, closingRank: rank*900, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Civil", openingRank: rank*500, closingRank: rank*1100, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Chemical", openingRank: rank*450, closingRank: rank*1000, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Aerospace", openingRank: rank*200, closingRank: rank*500, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Biotechnology", openingRank: rank*600, closingRank: rank*1300, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "AI & Data Science", openingRank: rank*80, closingRank: rank*250, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Information Technology", openingRank: rank*110, closingRank: rank*320, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Engineering Physics", openingRank: rank*350, closingRank: rank*750, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Metallurgical Engineering", openingRank: rank*550, closingRank: rank*1200, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Production Engineering", openingRank: rank*600, closingRank: rank*1300, year: 2023 },
+      { exam: exam as string, category: "GENERAL", branch: "Mining Engineering", openingRank: rank*700, closingRank: rank*1500, year: 2023 }
     ]
   };
   });

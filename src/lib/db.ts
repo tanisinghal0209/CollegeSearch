@@ -126,7 +126,8 @@ export const db = {
               'CAT': 'CAT',
               'NEET': 'NEET',
               'State CET': 'STATE_CET',
-              'BITSAT': 'BITSAT'
+              'BITSAT': 'BITSAT',
+              'CUET': 'CUET'
             };
             const mappedExams = filters.exam.map(e => examMap[e] || e);
             whereClause.predictorData = { some: { exam: { in: mappedExams } } };
@@ -244,7 +245,8 @@ export const db = {
           'CAT': 'CAT',
           'NEET': 'NEET',
           'State CET': 'STATE_CET',
-          'BITSAT': 'BITSAT'
+          'BITSAT': 'BITSAT',
+          'CUET': 'CUET'
         };
         const mapped = filters.exam.map(e => examMap[e] || e);
         result = result.filter(c =>
@@ -657,13 +659,14 @@ export const db = {
   predictor: {
     async predict(exam: string, category: string, rank: number) {
       const useDb = await canUsePrisma();
+      const isScoreBased = exam === "CUET" || exam === "BITSAT";
       if (useDb) {
         try {
           const data = await prisma.predictorData.findMany({
             where: {
               exam,
               category,
-              closingRank: { gte: rank }
+              closingRank: isScoreBased ? { lte: rank * 1.05 } : { gte: rank * 0.8 }
             },
             include: { college: true }
           });
@@ -677,8 +680,13 @@ export const db = {
       for(const col of fallbackDb.colleges) {
          if (col.predictorData) {
             for(const pd of col.predictorData) {
-               if (pd.exam === exam && pd.category === category && pd.closingRank >= rank * 0.8) {
-                  results.push({ ...pd, college: col });
+               if (pd.exam === exam && pd.category === category) {
+                  const match = isScoreBased
+                     ? pd.closingRank <= rank * 1.05
+                     : pd.closingRank >= rank * 0.8;
+                  if (match) {
+                     results.push({ ...pd, college: col });
+                  }
                }
             }
          }

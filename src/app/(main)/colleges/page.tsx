@@ -30,7 +30,7 @@ const INDIAN_STATES = [
   "Kerala", "Andhra Pradesh", "Punjab", "Haryana", "Bihar"
 ];
 
-const EXAM_OPTIONS = ["JEE Main", "JEE Advanced", "CAT", "NEET", "State CET"];
+const EXAM_OPTIONS = ["JEE Main", "JEE Advanced", "CAT", "NEET", "State CET", "CUET"];
 const TYPE_OPTIONS = ["Government", "Private", "Deemed"];
 
 function CollegesSearchPage() {

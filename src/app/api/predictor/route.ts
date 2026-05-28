@@ -4,7 +4,7 @@ import { z } from "zod";
 
 const predictorSchema = z.object({
   exam: z.string().min(1, "Exam is required"),
-  rank: z.number().int().positive("Rank must be a positive integer"),
+  rank: z.number().positive("Rank must be positive"),
   category: z.string().default("GENERAL"),
   branches: z.array(z.string()).optional(),
   state: z.string().optional()
@@ -49,15 +49,11 @@ export async function POST(request: NextRequest) {
     // Filter by branches if the user selected any
     if (branches && branches.length > 0) {
       rawResults = rawResults.filter((res: any) => {
-        // Map frontend branch selections to DB branch names
-        if (branches.includes("CS/IT") && res.branch.includes("Computer Science")) return true;
-        if (branches.includes("ECE") && res.branch.includes("ECE")) return true;
-        if (branches.includes("Mechanical") && res.branch.includes("Mechanical")) return true;
-        if (branches.includes("MBBS") && res.branch.includes("MBBS")) return true;
-        if (branches.includes("BDS") && res.branch.includes("BDS")) return true;
-        if (branches.includes("MBA") && res.branch.includes("MBA")) return true;
-        if (branches.includes("PGDM") && res.branch.includes("PGDM")) return true;
-        return false;
+        return branches.some(b => {
+          if (b === "CS/IT" && (res.branch.includes("Computer Science") || res.branch.includes("Information Technology"))) return true;
+          if (b === "Other") return true;
+          return res.branch.toLowerCase().includes(b.toLowerCase()) || b.toLowerCase().includes(res.branch.toLowerCase());
+        });
       });
     }
 
@@ -66,14 +62,30 @@ export async function POST(request: NextRequest) {
        rawResults = rawResults.filter((res: any) => res.college.state === state);
     }
     
+    const isScoreBased = exam === "CUET" || exam === "BITSAT" || exam === "CAT";
+
     const formattedResults = rawResults.map((res: any) => {
       const college = res.college;
       const closing = res.closingRank;
-      const diff = closing - rank;
+      
+      let diff = isScoreBased ? (rank - closing) : (closing - rank);
       
       let chance = "Reach";
-      if (diff > 1000) chance = "Safe";
-      else if (diff >= -500) chance = "Good"; // Give some leeway for 'Good'
+      if (isScoreBased) {
+        if (exam === "CAT") {
+          if (diff >= 1.0) chance = "Safe";
+          else if (diff >= 0) chance = "Good";
+        } else if (exam === "BITSAT") {
+          if (diff >= 15) chance = "Safe";
+          else if (diff >= -5) chance = "Good";
+        } else { // CUET
+          if (diff >= 20) chance = "Safe";
+          else if (diff >= -5) chance = "Good";
+        }
+      } else {
+        if (diff > 1000) chance = "Safe";
+        else if (diff >= -500) chance = "Good"; // Give some leeway for 'Good'
+      }
 
       return {
         id: res.id,

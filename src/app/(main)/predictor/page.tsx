@@ -38,6 +38,18 @@ const EXAMS = [
     name: "State CET",
     icon: MapPin,
     desc: "For state-level engineering/medical entrance."
+  },
+  {
+    key: "CUET",
+    name: "CUET",
+    icon: GraduationCap,
+    desc: "For admissions to Delhi University (DU) and other central universities."
+  },
+  {
+    key: "BITSAT",
+    name: "BITSAT",
+    icon: Award,
+    desc: "For admissions to BITS Pilani, Goa, and Hyderabad."
   }
 ];
 
@@ -58,7 +70,14 @@ function PredictorContent() {
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<any[]>([]);
 
-  const AVAILABLE_BRANCHES = exam === "NEET" ? ["MBBS", "BDS", "Other"] : exam === "CAT" ? ["MBA", "PGDM", "Other"] : ["CS/IT", "ECE", "Mechanical", "Civil", "Other"];
+  const AVAILABLE_BRANCHES = 
+    exam === "NEET" 
+      ? ["MBBS", "BDS", "BAMS", "BHMS", "Nursing", "B.Pharm", "BPT", "BVSc", "Other"] 
+      : exam === "CAT" 
+      ? ["MBA", "PGDM", "Executive MBA", "Finance", "Marketing", "Operations", "HR", "Business Analytics", "Information Technology", "International Business", "Other"] 
+      : exam === "CUET"
+      ? ["B.A. (Hons) Economics", "B.Com (Hons)", "B.Sc. (Hons) Physics", "B.A. (Hons) English", "B.A. (Hons) Political Science", "B.A. (Hons) History", "B.A. (Hons) Psychology", "B.Sc. (Hons) Chemistry", "B.Sc. (Hons) Computer Science", "B.Sc. (Hons) Mathematics", "Other"]
+      : ["CS/IT", "ECE", "Electrical", "Mechanical", "Civil", "Chemical", "Aerospace", "Biotechnology", "AI & Data Science", "Information Technology", "Engineering Physics", "Metallurgical Engineering", "Production Engineering", "Mining Engineering", "Other"];
 
   // Reset branches when exam changes
   useEffect(() => {
