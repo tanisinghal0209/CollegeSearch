@@ -63,14 +63,18 @@ function saveFallbackDb(schema: FallbackSchema) {
 }
 
 async function canUsePrisma(): Promise<boolean> {
-  if (!process.env.DATABASE_URL) return false;
+  if (!process.env.DATABASE_URL) {
+    console.warn("DATABASE_URL is not defined in environment variables. Falling back to JSON DB.");
+    return false;
+  }
   try {
     const timeout = new Promise<never>((_, reject) =>
       setTimeout(() => reject(new Error("DB Timeout")), 2000)
     );
     await Promise.race([prisma.$queryRaw`SELECT 1`, timeout]);
     return true;
-  } catch (e) {
+  } catch (e: any) {
+    console.error("Prisma connection check failed. Falling back to JSON DB. Error:", e?.message || e);
     return false;
   }
 }
